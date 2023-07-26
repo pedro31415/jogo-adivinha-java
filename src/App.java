@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        int op,num;
+      int op,num;
       int count = 0;
       Scanner scan = new Scanner(System.in);
       Random random = new Random();
@@ -18,7 +18,7 @@ public class App {
              do {
              System.out.println("Digite um número de 0 a 10: ");
              num = scan.nextInt();
-             if(num>10 || num<0){
+             if(num>11 || num<0){
               System.out.println("Opção inválida");
               count--;
              } else {
