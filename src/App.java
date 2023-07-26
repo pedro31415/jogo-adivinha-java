@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.io.IOException;
 import java.util.Random;
 
 public class App {
@@ -9,6 +10,7 @@ public class App {
       Random random = new Random();
       int valorR = random.nextInt(11);
       do {
+        clearScreen();
         System.out.println("1 - Jogar");
         System.out.println("2 - Sair");
         System.out.println("Opção desejada: ");
@@ -47,4 +49,9 @@ public class App {
       scan.close();
       System.out.println("Jogo Finalizado");
     }
+    public static void clearScreen() throws IOException, InterruptedException{
+        new  ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+  }
 }
+
+
